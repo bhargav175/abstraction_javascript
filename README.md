@@ -1,7 +1,7 @@
 # abstraction_javascript
 Private, Private static and Public static variables
 
-
+    //Closure returning IIFE
     var Car = (function(){
        
       //private static variable
@@ -11,13 +11,17 @@ Private, Private static and Public static variables
         privateCount++;
         Car.count++;
         Car.getPrivateCount = () => privateCount;
+        
         //private variable
         var id = Math.random();
+        
         this.getId = function(){
             console.log(id); 
         }
       }
     })();
+    
+    
     //public static variable
     Car.count = 0;
   
